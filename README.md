@@ -138,4 +138,27 @@ using System;
     }
 }
 OUTPUT:![image](https://user-images.githubusercontent.com/97939356/154634672-9f4cee12-94c1-4c80-a8bb-2b49670b1ae2.png)
+4)C# Program to Create a Gray Code
+using System;
+
+     namespace Exercises
+    {
+     class GrayCode
+    {
+        static int getGray(int n)
+        {
+            return n ^ (n >> 1);
+        }
+        static void Main(string[]args)
+        {
+            int InputNum, GrayNum;
+            Console.Write("\n Enter the decimal number:");
+            InputNum = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\n Binary Equivalent of {0}:{1}", InputNum, Convert.ToString(InputNum, 2));
+            GrayNum = getGray(InputNum);
+            Console.Write("\n GrayCode Equivalent of {0}:{1}", InputNum, Convert.ToString(GrayNum, 2));
+        }
+    }
+}
+OUTPUT:![image](https://user-images.githubusercontent.com/97939356/154635001-ed95122c-4bd6-4d4d-9e7d-238f6df9ef7a.png)
 
