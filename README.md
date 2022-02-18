@@ -290,6 +290,8 @@ Output:
 ![image](https://user-images.githubusercontent.com/97939356/154636847-9f14a558-ba5b-48ae-a349-9d24b5eaf609.png)
 ![image](https://user-images.githubusercontent.com/97939356/154636918-e3b9daa0-d1c1-4ce0-8f88-1731d2fe5157.png)
 
+7)C# Program 
+
 8)C# Program to find the frequency of the word "is" in agiven sentence
 using System;
 
@@ -321,5 +323,6 @@ using System;
 OUTPUT:
 
 ![image](https://user-images.githubusercontent.com/97939356/154637445-dc06633b-861b-4a59-ac6f-6036c27031cb.png)
+
 
 
