@@ -256,6 +256,40 @@ OUTPUT:
 
 ![image](https://user-images.githubusercontent.com/97939356/154635954-242f946c-5cd4-46d9-a11e-029e341768c1.png)
 
+7)C# Program to generate register number automatically for 100 students usinf=g static constructer
+using System;
+
+    namespace Exercises
+    {
+    class RegisterNum
+    {
+        int regNo;
+        static int startNum;
+        static RegisterNum()
+        {
+            startNum = 20210000;
+        }
+        RegisterNum()
+        {
+            regNo = ++startNum;
+        }
+        public static void Main(string[]args)
+        {
+            for(int i=0;i<100;i++)
+            {
+                RegisterNum Student = new RegisterNum();
+                Console.WriteLine("Student{0}:{1}", i + 1, Student.regNo);
+            }
+        }
+    }
+}
+
+Output:
+
+![image](https://user-images.githubusercontent.com/97939356/154636723-85d06d20-b231-4c5e-a85e-a83cea51d2d2.png)
+![image](https://user-images.githubusercontent.com/97939356/154636847-9f14a558-ba5b-48ae-a349-9d24b5eaf609.png)
+![image](https://user-images.githubusercontent.com/97939356/154636918-e3b9daa0-d1c1-4ce0-8f88-1731d2fe5157.png)
+
 
 
 
