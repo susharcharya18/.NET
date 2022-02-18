@@ -1,5 +1,5 @@
 # .NET
-
+1)C# Program to Print a Binary Triangle
 using System;
 
       namespace _2program_B.T_
@@ -29,3 +29,5 @@ using System;
         }
     }
 }
+OUTPUT:
+![image](https://user-images.githubusercontent.com/97939356/154633529-599810a6-b91f-4bd6-bd39-eb75f08ecff8.png)
