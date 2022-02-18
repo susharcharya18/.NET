@@ -30,7 +30,9 @@ using System;
     }
 }
 OUTPUT:
+
 ![image](https://user-images.githubusercontent.com/97939356/154633529-599810a6-b91f-4bd6-bd39-eb75f08ecff8.png)
+
 2)C# Program to Illustrate Multilevel Inheritance with Virtual Method(displaying students details)
 using System;
 
@@ -137,7 +139,9 @@ using System;
         }
     }
 }
-OUTPUT:![image](https://user-images.githubusercontent.com/97939356/154634672-9f4cee12-94c1-4c80-a8bb-2b49670b1ae2.png)
+OUTPUT:
+
+![image](https://user-images.githubusercontent.com/97939356/154634672-9f4cee12-94c1-4c80-a8bb-2b49670b1ae2.png)
 
 4)C# Program to Create a Gray Code
 using System;
@@ -161,7 +165,9 @@ using System;
         }
     }
 }
-OUTPUT:![image](https://user-images.githubusercontent.com/97939356/154635001-ed95122c-4bd6-4d4d-9e7d-238f6df9ef7a.png)
+OUTPUT:
+
+![image](https://user-images.githubusercontent.com/97939356/154635001-ed95122c-4bd6-4d4d-9e7d-238f6df9ef7a.png)
 
 6)C# Program to calculate volume of 2 boxes and find the resultant volume after addition of 2 boxes by implementing operator overloading
 using System;
@@ -204,7 +210,9 @@ using System;
         }
     }
 }
-OUTPUT:![image](https://user-images.githubusercontent.com/97939356/154635488-8c001601-0eb0-46a3-8256-e798796ff5f2.png)
+OUTPUT:
+
+![image](https://user-images.githubusercontent.com/97939356/154635488-8c001601-0eb0-46a3-8256-e798796ff5f2.png)
 
 7)C# Program to Implement Principles of Delegate(converting input string to uppercase first,last and entire string)
 using System;
@@ -244,7 +252,11 @@ using System;
 
     }
 }
-OUTPUT:![image](https://user-images.githubusercontent.com/97939356/154635954-242f946c-5cd4-46d9-a11e-029e341768c1.png)
+OUTPUT:
+
+![image](https://user-images.githubusercontent.com/97939356/154635954-242f946c-5cd4-46d9-a11e-029e341768c1.png)
+
+
 
 
 
