@@ -138,6 +138,7 @@ using System;
     }
 }
 OUTPUT:![image](https://user-images.githubusercontent.com/97939356/154634672-9f4cee12-94c1-4c80-a8bb-2b49670b1ae2.png)
+
 4)C# Program to Create a Gray Code
 using System;
 
@@ -161,6 +162,7 @@ using System;
     }
 }
 OUTPUT:![image](https://user-images.githubusercontent.com/97939356/154635001-ed95122c-4bd6-4d4d-9e7d-238f6df9ef7a.png)
+
 6)C# Program to calculate volume of 2 boxes and find the resultant volume after addition of 2 boxes by implementing operator overloading
 using System;
 
@@ -203,4 +205,46 @@ using System;
     }
 }
 OUTPUT:![image](https://user-images.githubusercontent.com/97939356/154635488-8c001601-0eb0-46a3-8256-e798796ff5f2.png)
+
+7)C# Program to Implement Principles of Delegate(converting input string to uppercase first,last and entire string)
+using System;
+
+    namespace Exercises
+    {
+    class Delegate
+    {
+        delegate string UppercaseDelegate(string input);
+        static string UppercaseFirst(string input)
+        {
+            char[] buffer = input.ToCharArray();
+            buffer[0] = char.ToUpper(buffer[0]);
+            return new string(buffer);
+        }
+        static string UppercaseLast(string input)
+        {
+            char[] buffer = input.ToCharArray();
+            buffer[buffer.Length - 1] = char.ToUpper(buffer[buffer.Length - 1]);
+            return new string(buffer);
+        }
+        static string UppercaseAll(string input)
+        {
+            return input.ToUpper();
+        }
+        static void WriteOutput(string input, UppercaseDelegate del)
+        {
+            Console.WriteLine("INPUT String:{0}", input);
+            Console.WriteLine("Output String:{0}", del(input));
+        }
+        static void Main()
+        {
+            WriteOutput("tom",new UppercaseDelegate(UppercaseFirst));
+            WriteOutput("tom", new UppercaseDelegate(UppercaseLast));
+            WriteOutput("tom", new UppercaseDelegate(UppercaseAll));
+        }
+
+    }
+}
+OUTPUT:![image](https://user-images.githubusercontent.com/97939356/154635954-242f946c-5cd4-46d9-a11e-029e341768c1.png)
+
+
 
