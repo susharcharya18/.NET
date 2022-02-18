@@ -1,0 +1,13 @@
+C:\Users\ADMIN\source\repos\2program(B.T)\2program(B.T)\obj\Debug\netcoreapp3.1\2program(B.T).AssemblyInfoInputs.cache
+C:\Users\ADMIN\source\repos\2program(B.T)\2program(B.T)\obj\Debug\netcoreapp3.1\2program(B.T).AssemblyInfo.cs
+C:\Users\ADMIN\source\repos\2program(B.T)\2program(B.T)\obj\Debug\netcoreapp3.1\2program(B.T).csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\source\repos\2program(B.T)\2program(B.T)\bin\Debug\netcoreapp3.1\2program(B.T).exe
+C:\Users\ADMIN\source\repos\2program(B.T)\2program(B.T)\bin\Debug\netcoreapp3.1\2program(B.T).deps.json
+C:\Users\ADMIN\source\repos\2program(B.T)\2program(B.T)\bin\Debug\netcoreapp3.1\2program(B.T).runtimeconfig.json
+C:\Users\ADMIN\source\repos\2program(B.T)\2program(B.T)\bin\Debug\netcoreapp3.1\2program(B.T).runtimeconfig.dev.json
+C:\Users\ADMIN\source\repos\2program(B.T)\2program(B.T)\bin\Debug\netcoreapp3.1\2program(B.T).dll
+C:\Users\ADMIN\source\repos\2program(B.T)\2program(B.T)\bin\Debug\netcoreapp3.1\2program(B.T).pdb
+C:\Users\ADMIN\source\repos\2program(B.T)\2program(B.T)\obj\Debug\netcoreapp3.1\2program(B.T).dll
+C:\Users\ADMIN\source\repos\2program(B.T)\2program(B.T)\obj\Debug\netcoreapp3.1\2program(B.T).pdb
+C:\Users\ADMIN\source\repos\2program(B.T)\2program(B.T)\obj\Debug\netcoreapp3.1\2program(B.T).genruntimeconfig.cache
+C:\Users\ADMIN\source\repos\2program(B.T)\2program(B.T)\obj\Debug\netcoreapp3.1\2program(B.T).csproj.AssemblyReference.cache
