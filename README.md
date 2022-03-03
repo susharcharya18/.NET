@@ -857,7 +857,100 @@ OUTPUT:
     OUTPUT:                
 ![image](https://user-images.githubusercontent.com/97939356/156509792-93cd2960-5495-4f10-bf1c-cf279df0e4c2.png)
 
-14)C# program 
+14)C# program to create thread pool
+
+      using System;
+      using System.Threading;
+
+      namespace Exercises
+      {
+      class ThreadPoolProg
+    {
+        public void ThreadFun1(object obj)
+        {
+        
+            int loop = 0;
+            for(loop=0;loop<=4;loop++)
+            {
+              Console.WriteLine("Thread 1 is executing");
+            }
+        }
+        public void ThreadFun2(object obj)
+        {
+
+            int loop = 0;
+            for (loop = 0; loop <= 4; loop++)
+            {
+                Console.WriteLine("Thread 2 is executing");
+            }
+        }
+        public static void Main()
+        {
+            ThreadPoolProg TP = new ThreadPoolProg();
+            for (int i = 0; i < 2; i++)
+            {
+                   ThreadPool.QueueUserWorkItem(new WaitCallback(TP.ThreadFun1));
+                   ThreadPool.QueueUserWorkItem(new WaitCallback(TP.ThreadFun2));
+            }
+            Console.ReadKey();
+        }          
+    }
+      }
+      OUTPUT:
+   ![image](https://user-images.githubusercontent.com/97939356/156510404-ebd774f4-90e0-476e-b241-3e95f2710185.png)
+   
+      15)C# program to demonstrate error handling using Try,Catch and Finally Block
+      using System;
+      namespace p15_d.e
+      {
+    class Exceptionhandling
+    {
+        static void Main(string[] args)
+        {
+            Age a = new Age();
+            try
+            {
+                a.displayAge();
+            }
+            catch(AgeIsNegativeException e)
+            { 
+                Console.WriteLine("AgeIsNegativeException:{0}", e.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Exception of Finallyblock is done");
+            }
+        }
+    }
+      }
+      public class AgeIsNegativeException : Exception
+      {
+    public AgeIsNegativeException(string message) : base(message)
+    {
+    }
+      }
+      public class Age
+      {
+    int age = -5;
+    public void displayAge()
+    {
+        if (age < 0)
+        {
+            throw (new AgeIsNegativeException("Age cannot be negative"));
+        }
+        else
+        {
+            Console.WriteLine("Age is:{0}", age);
+        }
+    }
+      }
+      
+      OUTPUT:
+      
+   ![image](https://user-images.githubusercontent.com/97939356/156511176-53f2edd7-50ab-4cfa-97c5-04798657684d.png)
+
+
+
 
    
    
