@@ -1,5 +1,27 @@
       # .NET
-        2)
+       1)
+       using System;
+      public class Fibonacci
+      {
+    public static void Main(string[] args)
+    {
+        int n1 = 0, n2 = 1, n3, i, number;
+        Console.WriteLine("Enter the number of elements:");
+        number = int.Parse(Console.ReadLine());
+        Console.Write(n1 + " " + n2 + " ");
+        for(i = 2; i < number; i++)
+        {
+            n3 = n1 + n2;
+            Console.Write(n3 + " ");
+            n1 = n2;
+            n2 = n3;
+        }
+    }
+    OUTPUT:
+   ![image](https://user-images.githubusercontent.com/97939356/156504948-929f41d8-6a09-46a0-80a0-13c2d4e46985.png)
+
+    
+       2)
       using System;
 
       namespace Exercise
@@ -27,11 +49,12 @@
     }
       }
 
-OUTPUT:
+      OUTPUT:
 
-      ![image](https://user-images.githubusercontent.com/97939356/156502267-c7cbc30f-d17b-4527-a867-96a75ce41ffe.png)
+   ![image](https://user-images.githubusercontent.com/97939356/156502267-c7cbc30f-d17b-4527-a867-96a75ce41ffe.png)
       
-      ![image](https://user-images.githubusercontent.com/97939356/156502324-5fca5b5d-b330-4d87-bf8e-8a5dd68075ac.png)
+   ![image](https://user-images.githubusercontent.com/97939356/156502324-5fca5b5d-b330-4d87-bf8e-8a5dd68075ac.png)
+      
       3)
       using System;
 
@@ -58,11 +81,12 @@ OUTPUT:
         }
     }
       }
-      OUTPUT:
       
-      ![image](https://user-images.githubusercontent.com/97939356/156502537-0776efd1-4f95-46f0-b311-09917b29d95d.png)
+        OUTPUT:
+      
+   ![image](https://user-images.githubusercontent.com/97939356/156502537-0776efd1-4f95-46f0-b311-09917b29d95d.png)
 
-      ![image](https://user-images.githubusercontent.com/97939356/156502608-f4473aa6-8f29-44bc-b790-4ea21c57a390.png)
+   ![image](https://user-images.githubusercontent.com/97939356/156502608-f4473aa6-8f29-44bc-b790-4ea21c57a390.png)
 
       4)
       using System;
@@ -87,7 +111,7 @@ OUTPUT:
 
        OUTPUT:
        
-         ![image](https://user-images.githubusercontent.com/97939356/156502786-476253c6-530b-4039-9038-8fb18ec8c5f2.png)
+   ![image](https://user-images.githubusercontent.com/97939356/156502786-476253c6-530b-4039-9038-8fb18ec8c5f2.png)
 
          5)
       using System;
@@ -117,22 +141,66 @@ OUTPUT:
       }
       OUTPUT:
       
-      ![image](https://user-images.githubusercontent.com/97939356/156503900-eef859e6-77a4-4a44-89e0-44edac8e7a4b.png)
+   ![image](https://user-images.githubusercontent.com/97939356/156503900-eef859e6-77a4-4a44-89e0-44edac8e7a4b.png)
       
-      ![image](https://user-images.githubusercontent.com/97939356/156503971-86794299-c691-49c5-8d39-b26f39758d81.png)
+   ![image](https://user-images.githubusercontent.com/97939356/156503971-86794299-c691-49c5-8d39-b26f39758d81.png)
       
       6)
+      using System;
+
+      namespace Exersice
+      {
+    public class Sum
+    {
+        public static void Main(string[] args)
+        {
+            int n, sum = 0, m;
+            Console.WriteLine("Enter a number");
+            n = int.Parse(Console.ReadLine());
+            while(n>0)
+            {
+                m = n % 10;
+                sum = sum + m;
+                n = n / 10;
+            }
+            Console.Write("Sum is=" + sum);
+        }
+    }
+      }
       
+    OUTPUT:
+    
+   ![image](https://user-images.githubusercontent.com/97939356/156504430-c483bd90-5db7-4190-a7a2-ffce3b1cb354.png)
+   
+   ![image](https://user-images.githubusercontent.com/97939356/156504517-5d2def11-1ba4-4289-86a5-671475b59390.png)
 
+      7)
+      using System;
 
+      namespace Exercise
+      {
+     public class reverse
+    {
+        public static void Main(string[] args)
+        {
+            int n, reverse = 0, rem;
+            Console.WriteLine("enter a number:");
+            n = int.Parse(Console.ReadLine());
+            while (n != 0)
+            {
+                rem = n % 10;
+                reverse = reverse * 10 + rem;
+                n /= 10;
+            }
+            Console.Write("Reverse number:" + reverse);
+        }
+    }
+      }
+      OUTPUT:
+      
+   ![image](https://user-images.githubusercontent.com/97939356/156504717-fb18951c-41a3-49f3-ac87-f7df8443710a.png)
 
-
-
-
-
-
-
-       1)C# Program to Print a Binary Triangle
+      8)C# Program to Print a Binary Triangle
       using System;
 
       namespace _2program_B.T_
@@ -164,10 +232,52 @@ OUTPUT:
 }
 OUTPUT:
 
-![image](https://user-images.githubusercontent.com/97939356/154633529-599810a6-b91f-4bd6-bd39-eb75f08ecff8.png)
+   ![image](https://user-images.githubusercontent.com/97939356/154633529-599810a6-b91f-4bd6-bd39-eb75f08ecff8.png)
+     
+     9)
+      using System
+      namespace Exercises
+      {
+    class AmicableNumber
+    {
+        static void Main(string[] args)
+        {
+            int num1, num2, sum1 = 0, sum2 = 0;
+            Console.WriteLine("\n--------AMICABLE NUMBERS-----------\n"); Console.Write("\nEnter the first number: ");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\nEnter the second number: ");
+            num2 = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i < num1; i++)
+            {
+                if (num1 % i == 0)
+                {
+                    sum1 += i;
+                }
+            }
+            for (int i = 1; i < num2; i++)
+            {
+                if (num2 % i == 0)
+                {
+                    sum2 += i;
+                }
+            }
+            if (sum1 == num2 && sum2 == num1)
+            {
+                Console.WriteLine("\nThe numbers {0} and {1} are amiciable.", num1, num2);
+            }
+            else
+            {
+                Console.WriteLine("\nThe numbers {0} and {1} are not amiciable.", num1, num2);
+            }
+        }
+    }
+      }
+      OUTPUT:
+      
+   ![image](https://user-images.githubusercontent.com/97939356/156505452-330358af-fdbb-4bf6-90a7-96ea120d4a05.png)
 
-2)C# Program to Illustrate Multilevel Inheritance with Virtual Method(displaying students details)
-using System;
+      10)C# Program to Illustrate Multilevel Inheritance with Virtual Method(displaying students details)
+      using System;
 
     namespace Exercises
      using System;
@@ -276,8 +386,8 @@ OUTPUT:
 
 ![image](https://user-images.githubusercontent.com/97939356/154634672-9f4cee12-94c1-4c80-a8bb-2b49670b1ae2.png)
 
-4)C# Program to Create a Gray Code
-using System;
+      11)C# Program to Create a Gray Code
+     using System;
 
      namespace Exercises
     {
@@ -297,13 +407,13 @@ using System;
             Console.Write("\n GrayCode Equivalent of {0}:{1}", InputNum, Convert.ToString(GrayNum, 2));
         }
     }
-}
-OUTPUT:
+      }
+      OUTPUT:
 
 ![image](https://user-images.githubusercontent.com/97939356/154635001-ed95122c-4bd6-4d4d-9e7d-238f6df9ef7a.png)
 
-6)C# Program to calculate volume of 2 boxes and find the resultant volume after addition of 2 boxes by implementing operator overloading
-using System;
+      12)C# Program to calculate volume of 2 boxes and find the resultant volume after addition of 2 boxes by implementing operator overloading
+      using System;
 
      namespace Exercises
     {
@@ -342,13 +452,13 @@ using System;
             Console.WriteLine("Volume after adding boxes: {0}", box1 + box2);
         }
     }
-}
-OUTPUT:
+      }
+      OUTPUT:
 
 ![image](https://user-images.githubusercontent.com/97939356/154635488-8c001601-0eb0-46a3-8256-e798796ff5f2.png)
 
-7)C# Program to Implement Principles of Delegate(converting input string to uppercase first,last and entire string)
-using System;
+      13)C# Program to Implement Principles of Delegate(converting input string to uppercase first,last and entire string)
+      using System;
 
     namespace Exercises
     {
@@ -384,13 +494,13 @@ using System;
         }
 
     }
-}
-OUTPUT:
+      }
+      OUTPUT:
 
 ![image](https://user-images.githubusercontent.com/97939356/154635954-242f946c-5cd4-46d9-a11e-029e341768c1.png)
 
-7)C# Program to generate register number automatically for 100 students usinf=g static constructer
-using System;
+      14)C# Program to generate register number automatically for 100 students usinf=g static constructer
+      using System;
 
     namespace Exercises
     {
@@ -415,9 +525,9 @@ using System;
             }
         }
     }
-}
+      }
 
-Output:
+            Output:
 
 ![image](https://user-images.githubusercontent.com/97939356/154636723-85d06d20-b231-4c5e-a85e-a83cea51d2d2.png)
 ![image](https://user-images.githubusercontent.com/97939356/154636847-9f14a558-ba5b-48ae-a349-9d24b5eaf609.png)
@@ -425,8 +535,8 @@ Output:
 
 7)C# Program 
 
-8)C# Program to find the frequency of the word "is" in agiven sentence
-using System;
+      15)C# Program to find the frequency of the word "is" in agiven sentence
+      using System;
 
     namespace Exercises
      {
@@ -458,7 +568,7 @@ OUTPUT:
 ![image](https://user-images.githubusercontent.com/97939356/154637445-dc06633b-861b-4a59-ac6f-6036c27031cb.png)
 
 
-      9)
+      16)C# program that bench mark 2D,Jagged array allocation 
       using System;
       using System.Diagnostics;
 
@@ -507,11 +617,11 @@ OUTPUT:
     }
       }
 
-      output:
+      OUTPUT:
       
-      ![image](https://user-images.githubusercontent.com/97939356/156500325-e0d82e4c-335a-486f-8b14-9be3d585000a.png)
+   ![image](https://user-images.githubusercontent.com/97939356/156500325-e0d82e4c-335a-486f-8b14-9be3d585000a.png)
 
-      10)
+      17)C# Program to find the sum of the values on diagonal of the matrix
              using System;
             namespace Exercises
             {
@@ -563,7 +673,7 @@ OUTPUT:
       
       
       
-         11)
+         11)C# Program to create a file to check the existence of a file and read the content of the file
       using System;
       using System.IO;
 
@@ -638,5 +748,52 @@ OUTPUT:
             }
         }
     }
-}
+      }
+      OUTPUT:
+      
+   ![image](https://user-images.githubusercontent.com/97939356/156507495-33a7644d-043f-42b9-936c-ba239343a781.png)
+   
+   ![image](https://user-images.githubusercontent.com/97939356/156507583-c36d4822-9bfd-4251-b049-42f6f3e9d749.png)
+   
+   ![image](https://user-images.githubusercontent.com/97939356/156507653-4c9c5c6b-b02e-497b-86cc-3c8c2cb111f1.png)
+  
+       12)C# program to perform the file comparison
+      using System;
+      using System.IO;
 
+      namespace Exercises
+      {
+    class FileRead
+    {
+        public static void Main()
+        {
+            string file1;
+            string file2;
+            Console.Write("Enter the first file path:");
+            file1 = Console.ReadLine();
+            Console.Write("Enter the first file path:");
+            file2 = Console.ReadLine();
+            if (!File.Exists(file1))
+            {
+                Console.WriteLine("Frist file does not exist!");
+            }
+            else if (!File.Exists(file2))
+            {
+                Console.WriteLine("Second file does not exist!");
+            }
+            else if (File.ReadAllText(file1) == File.ReadAllText(file2))
+            {
+                Console.WriteLine("Both file contain the same content");
+            }
+        }
+    }
+      }
+      
+      OUTPUT:
+      
+      
+
+   
+
+
+      
