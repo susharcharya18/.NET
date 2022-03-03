@@ -785,13 +785,83 @@ OUTPUT:
             {
                 Console.WriteLine("Both file contain the same content");
             }
+            else
+            {
+                Console.WriteLine("Content of the file are not same");
+            }
         }
     }
       }
       
       OUTPUT:
-      
-      
+   ![image](https://user-images.githubusercontent.com/97939356/156508728-1ea685ee-e1d9-417c-bbb5-78b6f5c5e015.png)
+  
+  ![image](https://user-images.githubusercontent.com/97939356/156509069-5aad416d-c478-42c1-8217-eb3f4ed3279e.png)
+
+      13)C# program to implement Icomparable Interface
+      using System;
+      namespace  Exercises
+      {
+    class Fraction:IComparable
+    {
+        int z, n;
+        public Fraction(int z,int n)
+        {
+            this.z = z;
+            this.n = n;
+        }
+        public static Fraction operator +(Fraction a, Fraction b)
+        {
+            return new Fraction(a.z * b.n + a.n * b.z, a.n * b.n);
+        }
+        public int CompareTo(object obj)
+        {
+            Fraction f = (Fraction)obj;
+            if ((float)z / n < (float)f.z / f.n)
+                return -1;
+            else if ((float)z / n > (float)f.z / f.n)
+                return 1;
+            else
+                return 0;
+        }
+        public override string ToString()
+        {
+            return z + "/" + n;
+        }
+
+    }
+    class ICompInterface
+    {
+        public static void Main()
+        {
+            Fraction[] a =
+            {
+                new Fraction(5,2),
+                new Fraction(29,6),
+                new Fraction(4,5),
+                new Fraction(10,8),
+                new Fraction(34,7)
+            };
+            Array.Sort(a);
+            Console.WriteLine("Implementing the IComparable Interface in" + "Displaying Fraction:");
+            foreach (Fraction f in a)
+            {
+                Console.WriteLine(f + " ");
+            }
+            Console.WriteLine();
+            Console.ReadLine();
+        }
+    }
+      }
+                
+    OUTPUT:                
+![image](https://user-images.githubusercontent.com/97939356/156509792-93cd2960-5495-4f10-bf1c-cf279df0e4c2.png)
+
+14)C# program 
+
+   
+   
+
 
    
 
