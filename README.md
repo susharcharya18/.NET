@@ -1,5 +1,5 @@
       # .NET
-       1)
+       1)Write a C# program to print Fibonacci series using Recursion and without using Recursion. 
        using System;
       public class Fibonacci
       {
@@ -21,7 +21,8 @@
    ![image](https://user-images.githubusercontent.com/97939356/156504948-929f41d8-6a09-46a0-80a0-13c2d4e46985.png)
 
     
-       2)
+       2)Write a C# program to check whether the given number is Prime or not. 3. Write a C# program to check whether the given element is Palindrome or not. 4. Write a C# program to print factorial of a number. 
+
       using System;
 
       namespace Exercise
@@ -55,7 +56,7 @@
       
    ![image](https://user-images.githubusercontent.com/97939356/156502324-5fca5b5d-b330-4d87-bf8e-8a5dd68075ac.png)
       
-      3)
+      3)Write a C# program to check whether the given element is Palindrome or not.
       using System;
 
       namespace Exercise
