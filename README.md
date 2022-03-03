@@ -1,6 +1,139 @@
-# .NET
-1)C# Program to Print a Binary Triangle
-using System;
+      # .NET
+        2)
+      using System;
+
+      namespace Exercise
+      {
+    public class Prime 
+    {
+        static void Main(string[] args)
+        {
+            int n, i, m = 0, flag = 0;
+            Console.WriteLine("Enter the number to check the prime");
+            n = int.Parse(Console.ReadLine());
+            m = n / 2;
+            for (i = 2; i <= m; i++)
+            {
+                if (n % i == 0)
+                {
+                    Console.Write("Number is not a Prime");
+                    flag = 1;
+                    break;
+                }
+            }
+            if (flag == 0)
+                Console.Write("Number is Prime");
+        }
+    }
+      }
+
+OUTPUT:
+
+      ![image](https://user-images.githubusercontent.com/97939356/156502267-c7cbc30f-d17b-4527-a867-96a75ce41ffe.png)
+      
+      ![image](https://user-images.githubusercontent.com/97939356/156502324-5fca5b5d-b330-4d87-bf8e-8a5dd68075ac.png)
+      3)
+      using System;
+
+      namespace Exercise
+      {
+    public class palindrome
+    {
+        public static void Main(string[] args)
+        {
+            int n, r, sum = 0, temp;
+            Console.Write("Enter the number : ");
+            n = int.Parse(Console.ReadLine());
+            temp = n;
+            while (n > 0)
+            {
+                r = n % 10;
+                sum = (sum * 10) + r;
+                n = n / 10;
+            }
+            if (temp == sum)
+                Console.Write("Number is Palindrome");
+            else
+                Console.Write("Number is not Palindrome");
+        }
+    }
+      }
+      OUTPUT:
+      
+      ![image](https://user-images.githubusercontent.com/97939356/156502537-0776efd1-4f95-46f0-b311-09917b29d95d.png)
+
+      ![image](https://user-images.githubusercontent.com/97939356/156502608-f4473aa6-8f29-44bc-b790-4ea21c57a390.png)
+
+      4)
+      using System;
+
+      namespace Exercise
+      {
+        public class Factorial
+    {
+        public static void Main(string[] args)
+        {
+            int i, fact = 1, number;
+            Console.WriteLine("Enter any number:");
+            number = int.Parse(Console.ReadLine());
+            for(i=1;i<=number;i++)
+            {
+                fact = fact * i;
+            }
+            Console.Write("Factorial of" + number + "is:" + fact);
+        }
+    }
+      }
+
+       OUTPUT:
+       
+         ![image](https://user-images.githubusercontent.com/97939356/156502786-476253c6-530b-4039-9038-8fb18ec8c5f2.png)
+
+         5)
+      using System;
+      namespace Exercise
+      {
+
+    public class Armstrong
+    {
+        public static void Main(string[] args)
+        {
+            int n, r, sum = 0, temp;
+            Console.WriteLine("Enter the number");
+            n = int.Parse(Console.ReadLine());
+            temp = n;
+            while(n>0)
+            {
+                r = n % 10;
+                sum = sum + (r * r * r);
+                n = n / 10;
+            }
+            if (temp == sum)
+                Console.Write("Armstrong Number");
+            else
+                Console.Write("Not Armstrong number");
+        }
+    }
+      }
+      OUTPUT:
+      
+      ![image](https://user-images.githubusercontent.com/97939356/156503900-eef859e6-77a4-4a44-89e0-44edac8e7a4b.png)
+      
+      ![image](https://user-images.githubusercontent.com/97939356/156503971-86794299-c691-49c5-8d39-b26f39758d81.png)
+      
+      6)
+      
+
+
+
+
+
+
+
+
+
+       1)C# Program to Print a Binary Triangle
+      using System;
 
       namespace _2program_B.T_
       {
@@ -325,4 +458,185 @@ OUTPUT:
 ![image](https://user-images.githubusercontent.com/97939356/154637445-dc06633b-861b-4a59-ac6f-6036c27031cb.png)
 
 
+      9)
+      using System;
+      using System.Diagnostics;
+
+      namespace Exercises
+      {
+    class BenchmarkAllocation
+    {
+        const int max = 100000;
+        static void Main(string[] args)
+        {
+            var Arr2D = new int[100, 100];
+            var ArrJagged = new int[100][];
+            for (int i = 0; i < 100; i++)
+            {
+                ArrJagged[i] = new int[100];
+            }
+            var Stopwatch2D = Stopwatch.StartNew();
+            for (int i = 0; i < max; i++)
+            {
+                for (int j = 0; j < 100; j++)
+                {
+                    for (int k = 0; k < 100; k++)
+                    {
+                        Arr2D[j, k] = k;
+                    }
+                }
+            }
+            Stopwatch2D.Stop();
+            var StopwatchJagged = Stopwatch.StartNew();
+            for (int i = 0; i < max; i++)
+            {
+                for (int j = 0; j < 100; j++)
+                {
+                    for (int k = 0; k < 100; k++)
+                    {
+                        Arr2D[j, k] = k;
+                    }
+                }
+            }
+            StopwatchJagged.Stop();
+            Console.Write("\n Time Taken for Allocation in case of 2D array:");
+            Console.WriteLine(Stopwatch2D.Elapsed.TotalMilliseconds + "millisecond");
+            Console.Write("\n Time Taken for Allocation in case of Jagged array:");
+            Console.WriteLine(StopwatchJagged.Elapsed.TotalMilliseconds + "millisecond");
+        }
+    }
+      }
+
+      output:
+      
+      ![image](https://user-images.githubusercontent.com/97939356/156500325-e0d82e4c-335a-486f-8b14-9be3d585000a.png)
+
+      10)
+             using System;
+            namespace Exercises
+            {
+            class SumOfDiagonal
+            {
+        static void Main(string[] args)
+        {
+            int MaxRow, MaxCol, Sum = 0;
+            int[,] Matrix;
+            Console.WriteLine("\n-----SUM OF DIAGONAL OF A MATRIX------\n");
+            Console.Write("\n enter the number of rows:");
+            MaxRow = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\n enter the number of columns:");
+            MaxCol = Convert.ToInt32(Console.ReadLine());
+            if (MaxRow != MaxCol)
+            {
+                Console.WriteLine("\n the dimension entered are not a square matrix");
+                Console.WriteLine("\n exiting the program");
+                return;
+            }
+            Matrix = new int[MaxRow, MaxCol];
+            for (int i = 0; i < MaxRow; i++)
+            {
+                for (int j = 0; j < MaxCol; j++)
+                {
+                    Console.Write("\n Enter the ({0},{1} the element of matrix:", (i + 1), (j + 1));
+                    Matrix[i, j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            Console.WriteLine("\n the entered matrix is:");
+            for (int i = 0; i < MaxRow; i++)
+            {
+                for (int j = 0; i < MaxCol; j++)
+                {
+                    Console.Write("  " + Matrix[i, j]);
+                    if (i == j)
+                    {
+                        Sum += Matrix[i, j];
+                    }
+                }
+                Console.WriteLine();
+            }
+           Console.WriteLine("\n the sum of diagonal is:" + Sum);
+        }
+    }
+      }
+      
+      OUTPUT:
+      
+      
+      
+         11)
+      using System;
+      using System.IO;
+
+      namespace Exercises
+      {
+    class FileRead
+    {
+        public static void Main()
+        {
+            string fileName;
+            while (true)
+            {
+                Console.WriteLine("\n 1.CREATE A FILE:");
+                Console.WriteLine("\n 2.Existence of the file:");
+                Console.WriteLine("\n 3.Read the content of the file:");
+                Console.WriteLine("\n 4.Exit:");
+                Console.WriteLine("\n ENTER YOUR CHOICE:");
+                int ch = int.Parse(Console.ReadLine());
+                switch (ch)
+                {
+                    case 1:
+                        Console.Write("\n Enter the file name to create:");
+                        fileName = Console.ReadLine();
+                        Console.WriteLine("\nWrite the content to the file:");
+                        string r = Console.ReadLine();
+                        using (StreamWriter fileStr = File.CreateText(fileName)) 
+                            {
+                            fileStr.WriteLine(r);
+                             }
+                        Console.WriteLine("File is Created"); 
+                        break;
+                    case 2:
+                        Console.Write("\n enter the file name:");
+                        fileName = Console.ReadLine();
+                        if (File.Exists(fileName))
+                        {
+                            Console.WriteLine("File exist");
+                        }
+                        else
+                        {
+                            Console.WriteLine("\n file does not exist in current director");
+                        }
+                        break;
+                        case 3:
+                        Console.Write("Enter the file name to read the content:");
+                        fileName = Console.ReadLine();
+                        if (File.Exists(fileName))
+                        {
+                            using (StreamReader sr= File.OpenText(fileName))
+                            {
+                                string s = "  ";
+                                Console.WriteLine("\n here the content of the file:");
+                                while ((s = sr.ReadLine()) != null)
+                                {
+                                    Console.WriteLine(s);
+                                }
+                                Console.WriteLine(" ");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("\n File does not exist");
+                        }
+                        break;
+                        case 4:
+                        Console.WriteLine("\n Exiting");
+                        return;
+                        default:
+                        Console.WriteLine("\n Invalid choice");
+                        break;
+                } 
+            }
+        }
+    }
+}
 
