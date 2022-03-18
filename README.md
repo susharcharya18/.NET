@@ -1070,7 +1070,7 @@ OUTPUT:
    ![image](https://user-images.githubusercontent.com/97939356/158940499-85791966-2dad-441f-bb85-35d22c0c687f.png)
        
       21. C# Program to perform a number guessing game. 
-         using System;
+        using System;
       using System.Collections.Generic;
       using System.ComponentModel;
       using System.Data;
@@ -1093,18 +1093,19 @@ OUTPUT:
         public Form1()
         {
             InitializeComponent();
-        }
-        void InitializeComponent1()
-        {
-            value = r.Next(5);
+        
+            value = r.Next(10);
             this.Controls.Clear();
             this.BackColor = Color.SkyBlue;
             this.AutoSize = true;
             this.Padding = new Padding(16);
             Label label = new Label();
-            label.Text = "Pick a number between 1 and 100"; label.Bounds = new Rectangle(10, 20, 340, 40); label.Font = new Font("Arial", 16);
+            label.Text = "Pick a number between 1 and 100";
+            label.Bounds = new Rectangle(10, 20, 340, 40); 
+            label.Font = new Font("Arial", 16);
             textBox1 = new TextBox();
-            textBox1.Bounds = new Rectangle(20, 50, 120, 80); textBox1.Font = new Font("Arial", 24);
+            textBox1.Bounds = new Rectangle(20, 50, 120, 80);
+            textBox1.Font = new Font("Arial", 24);
 
             button1 = new Button();
             button1.Text = " Check Your Guess ";
@@ -1156,33 +1157,37 @@ OUTPUT:
                 else if (guessnum < value)
                 {
                     richTextBox1.Text += guessnum + "\n";
-                    label4.Text = "wrong Guess and number of guesses left are " + (10 - guess);
+                    MessageBox.Show("wrong Guess and number of guesses left are " + (10 - guess));
                 }
                 else if (guessnum > value)
                 {
                     richTextBox2.Text += guessnum + "\n";
-                    label4.Text = "wrong Guess and number of guesses left are " + (10 - guess);
+                    MessageBox.Show("wrong Guess and number of guesses left are " + (10 - guess));
                 }
                 guess++;
                 win--;
             }
             if (guess == 11)
             {
-                label4.Text = "You loose,Correct Guess is " + value;
+                MessageBox.Show( "You loose,Correct Guess is " + value);
             }
         }
-        /*static void Main()
+
+        private void label3_Click(object sender, EventArgs e)
         {
-            Application.Run(new Form1());
-        }*/
+
+        }
+        /*static void Main()
+      {
+       Application.Run(new Form1());
+      }*/
     }
       }
-   output:
-   
-   ![image](https://user-images.githubusercontent.com/97939356/158950719-bf294d64-0e50-4d30-9b2c-f80f0acca532.png)
-   ![image](https://user-images.githubusercontent.com/97939356/158950905-70dc5d55-ec1c-4174-ad38-8bd68a3a88b9.png)
-   ![image](https://user-images.githubusercontent.com/97939356/158951014-e659cdd6-a9e1-4d0e-b1c1-4cb24720a0b8.png)
-
+      OUTPUT:
+      
+![image](https://user-images.githubusercontent.com/97939356/158955978-048dc95d-1090-4e4a-837d-ae20b8caf75e.png)
+![image](https://user-images.githubusercontent.com/97939356/158956309-e6b77d91-1fdb-4b1e-82e7-9d22d3d37701.png)
+![image](https://user-images.githubusercontent.com/97939356/158956430-eda699e6-beca-4c03-846b-0b6fdd8b98e5.png)
 
 
 
