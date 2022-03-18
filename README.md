@@ -949,6 +949,126 @@ OUTPUT:
       OUTPUT:
       
    ![image](https://user-images.githubusercontent.com/97939356/156511176-53f2edd7-50ab-4cfa-97c5-04798657684d.png)
+   
+        1)C# Program to Convert Digits to Words.    
+        using System;
+      using System.Collections.Generic;
+      using System.ComponentModel;
+      using System.Data;
+      using System.Drawing;
+      using System.Linq;
+      using System.Text;
+      using System.Threading;
+      using System.Windows.Forms;
+
+      namespace prgm44
+      {
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            backgroundWorker1.WorkerReportsProgress = true;
+            backgroundWorker1.RunWorkerAsync();
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            for (int i = 1; i <= 100; i++)
+            {
+                Thread.Sleep(50);
+                backgroundWorker1.ReportProgress(i);
+            }
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar1.Value = e.ProgressPercentage;
+            this.Text = "Progress: " + e.ProgressPercentage.ToString() + "%";
+        }
+
+    }
+      }
+      
+      OUTPUT:
+      
+![image](https://user-images.githubusercontent.com/97939356/158940789-c1872d91-c34b-4d81-be83-343440e93929.png)
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        3) C# Program to Perform Reversal, Padding and Trimming Operations on  string. 
+            using System;
+      using System.Collections.Generic;
+      using System.ComponentModel;
+      using System.Data;
+      using System.Drawing;
+      using System.Linq;
+      using System.Text;
+      using System.Threading.Tasks;
+      using System.Windows.Forms;
+
+      namespace prgm555
+      {
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            System.Timers.Timer timer = new System.Timers.Timer();
+            timer.Interval = 1000;//1s 
+            timer.Elapsed += Timer_Elapsed;
+            timer.Start();
+        }
+        private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            circularProgressBar1.Invoke((MethodInvoker)delegate
+            {
+                circularProgressBar1.Text = DateTime.Now.ToString("hh:mm:ss"); circularProgressBar1.SubscriptText = DateTime.Now.ToString("tt");//AM or PM
+             });
+        }
+    }
+      }
+      
+      OUTPUT:
+   ![image](https://user-images.githubusercontent.com/97939356/158940499-85791966-2dad-441f-bb85-35d22c0c687f.png)
+
 
 
 
