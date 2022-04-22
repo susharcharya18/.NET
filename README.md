@@ -999,36 +999,6 @@ OUTPUT:
 ![image](https://user-images.githubusercontent.com/97939356/158940789-c1872d91-c34b-4d81-be83-343440e93929.png)
 
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         3) C# Program to Perform Reversal, Padding and Trimming Operations on  string. 
             using System;
       using System.Collections.Generic;
@@ -1293,6 +1263,8 @@ OUTPUT:
 ![image](https://user-images.githubusercontent.com/97939356/164611409-93fdfb88-4d7c-45eb-b881-ca61b46d37fd.png)
 
 ![image](https://user-images.githubusercontent.com/97939356/164611948-bb8c6dd4-bb03-47cc-86d2-83325cf3617e.png)
+
+
 
 
 
