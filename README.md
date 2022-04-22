@@ -1264,6 +1264,65 @@ OUTPUT:
 
 ![image](https://user-images.githubusercontent.com/97939356/164611948-bb8c6dd4-bb03-47cc-86d2-83325cf3617e.png)
 
+      3)
+      using System;
+      using System.Collections.Generic;
+      using System.ComponentModel;
+      using System.Data;
+      using System.Drawing;
+      using System.Linq;
+      using System.Text;
+      using System.Threading.Tasks;
+      using System.Windows.Forms;
+
+      namespace wRTP
+      {
+      public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnrev_Click(object sender, EventArgs e)
+        {
+            string inputString, revstr = "";
+            int Length;
+            inputString = txtInput.Text;
+            Length = inputString.Length - 1;
+            while (Length >= 0)
+            {
+                revstr = revstr + inputString[Length];
+                Length--;
+            }
+            inputString = txtInput.Text;
+            MessageBox.Show("Reverse String Is : " + revstr, "Result");
+
+        }
+        private void btntrim_Click(object sender, EventArgs e)
+        {
+            string inputString;
+            inputString = txtInput.Text;
+            MessageBox.Show("The String After Trimming : " + inputString.Trim(), "Result");
+        }
+        private void btnpad_Click(object sender, EventArgs e)
+        {
+            string inputString;
+            inputString = txtInput.Text;
+            inputString = inputString.PadLeft(10, '*');
+            inputString = inputString.PadRight(15, '*');
+            MessageBox.Show("String After Padding : " + inputString, "Result");
+        }
+    }
+}
+output:
+
+![image](https://user-images.githubusercontent.com/97939356/164615857-8fcc3fde-a453-482d-b09a-db4717792df8.png)
+![image](https://user-images.githubusercontent.com/97939356/164615931-11fe3461-f0bd-464e-9b51-9709da6b341f.png)
+![image](https://user-images.githubusercontent.com/97939356/164616168-4b2563cf-b050-499c-823d-d274cb454f0e.png)
+![image](https://user-images.githubusercontent.com/97939356/164616294-fc72ad36-7850-4d0d-9e29-28aa8fa7b412.png)
+
+
 
 
 
