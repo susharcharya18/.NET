@@ -1322,6 +1322,77 @@ output:
 ![image](https://user-images.githubusercontent.com/97939356/164616168-4b2563cf-b050-499c-823d-d274cb454f0e.png)
 ![image](https://user-images.githubusercontent.com/97939356/164616294-fc72ad36-7850-4d0d-9e29-28aa8fa7b412.png)
 
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace money
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            {
+                label4.Visible = true;
+                if (textBox1.Text == "")
+                {
+                    label4.Text = "Enter the amount";
+                }
+                else
+                {
+                    Double convertedamt = Convert.ToDouble(textBox1.Text);
+                    if (comboBox1.SelectedItem == "INR" && comboBox2.SelectedItem == "USD")
+                    {
+                        Double a = convertedamt / 74;
+                        label4.Text = a + "$";
+                    }
+                    else if (comboBox1.SelectedItem == "INR" && comboBox2.SelectedItem == "SAR")
+                    {
+                        Double a = convertedamt / 17;
+                        label4.Text = a + "SAR";
+                    }
+                    else if (comboBox1.SelectedItem == "INR" && comboBox2.SelectedItem == "EUR")
+                    {
+
+                        Double a = convertedamt / 11;
+                        label4.Text = a + "EUR";
+                    }
+                    else
+                    {
+                        label4.Text = "Please Enter the conversion code";
+                    }
+                }
+            }
+        }
+    }
+}
+![image](https://user-images.githubusercontent.com/97939356/165696536-09c20007-967b-4e22-8875-50765a1edcbc.png)
+![image](https://user-images.githubusercontent.com/97939356/165696674-1b5775de-f50d-443d-9682-5557e2f266f7.png)
+![image](https://user-images.githubusercontent.com/97939356/165696839-4d2d6b83-c1eb-450a-aa86-039a9c0db48b.png)
+![image](https://user-images.githubusercontent.com/97939356/165697039-f71d35ff-a6f9-43b5-947c-7a646e7e7d9f.png)
+
+
+
+
+
+
+
 
 
 
